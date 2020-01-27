@@ -1,6 +1,7 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const AssetsPlugin = require('assets-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   context: path.resolve(__dirname, '../src'),
@@ -8,6 +9,7 @@ module.exports = {
     app: ['./js/index.js'],
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new AssetsPlugin({
       filename: 'webpack_assets.json',
       path: path.join(__dirname, '../data'),
