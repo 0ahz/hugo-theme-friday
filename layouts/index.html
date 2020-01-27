@@ -1,0 +1,18 @@
+{{ define "main" }}
+
+{{- partial "site-categories.html" . -}}
+
+<div class="site-summary container">
+  {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+  {{ $pages := $pages | intersect (where .Site.RegularPages ".Draft" false) }}
+  {{ $paginator := .Paginate ( $pages  ) }}
+
+    {{ range $paginator.Pages }}
+    {{- partial "summary.html" . -}}
+    {{ end }}
+    
+    {{- partial "paginator.html" . -}}
+</div>
+
+{{ end }}
+

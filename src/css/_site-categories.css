@@ -1,0 +1,29 @@
+.site-categories {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 2em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #f2f2f2;
+}
+.site-categories a {
+  display: block;
+  text-decoration: none;
+  color: #111;
+  background-color: #fff;
+  border: 1px solid #e5e9f2;
+  border-radius: 32px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 0 20px;
+  cursor: pointer;
+  outline: 0;
+  margin-bottom: 10px;
+  margin-right: 8px;
+}
+.site-categories a.active {
+  color: #fff;
+  background-color: #111;
+  border: 1px solid #111;
+}

@@ -1,0 +1,7 @@
+<div class="site-categories container">
+  {{ $title := .Title }} 
+  <a class="{{ if eq $title .Site.Title }}active{{ end }}" href="{{ .Site.BaseURL }}">All</a>
+  {{ range .Site.Taxonomies.categories }}
+    <a class="{{ if eq $title .Page.Title }}active{{ end }}" href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+  {{ end }}
+</div>

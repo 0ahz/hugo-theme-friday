@@ -1,0 +1,43 @@
+
+{{ define "main" }}
+<div class="site-post">
+  <div class="container">
+    <div class="header">
+      <h1 class="title">{{ .Title }}</h1>
+      <div class="meta">
+        <time class="date">{{ .Date.Format "Jan 02, 2006" }}</time>
+        <span class="author">{{ .Params.author }}</span>
+      </div>
+    </div>
+    <div class="content">
+      {{ .Content }}
+    </div>
+
+    {{ with .Params.topics }}
+    <div class="topics">
+      {{ range . }}
+      <a href="{{ "topics" | absURL}}{{ . | urlize }}">{{ . }}</a>
+      {{ end }}
+    </div>
+    {{ end }}
+
+    {{/*  {{ with .Params.tags }}
+    <div class="tags">
+      {{ range . }}
+      <a href="{{ "tags/" | absURL }}{{ . | urlize }}">#{{ . }}</a>
+      {{ end }}
+    </div>
+    {{ end }}
+
+    <div class="prev-next">
+      {{ with .PrevInSection }}
+        <a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
+      {{ end }}
+      {{ with .NextInSection }}
+        <a class="next" href="{{.Permalink}}"> {{.Title}}</a>
+      {{ end }}
+    </div>  */}}
+
+  </div>
+</div>
+{{ end }}

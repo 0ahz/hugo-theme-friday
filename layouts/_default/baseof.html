@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html>
-    {{- partial "head.html" . -}}
+<html lang="{{ $.Site.LanguageCode | default "en" }}">
+    {{- partial "site-head.html" . -}}
     <body>
-        {{- partial "header.html" . -}}
-        <div id="content">
+        {{- partial "site-header.html" . -}}
+        
+        <main  aria-role="main">
         {{- block "main" . }}{{- end }}
-        </div>
-        {{- partial "footer.html" . -}}
+        </main>
+        
+        {{ block "footer" . }}{{ partialCached "site-footer.html" . }}{{ end }}
+        {{ block "scripts" . }}{{ partialCached "site-scripts.html" . }}{{ end }}
     </body>
 </html>

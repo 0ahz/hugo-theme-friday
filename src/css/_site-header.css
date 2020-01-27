@@ -1,0 +1,44 @@
+.site-header {
+  padding: 20px 0;
+  border-bottom: 1px solid #f9f9f9;
+}
+.site-header .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.site-header .brand {
+  opacity: 0.8;
+  color: #444;
+  font-size: 24px;
+  height: 30px;
+  line-height: 28px;
+  font-weight: 300;
+  text-decoration: none;
+}
+.site-header .brand:hover {
+  opacity: 1;
+}
+.site-header .menu {
+  display: flex;
+}
+.site-header .menu a {
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #444;
+  font-size: 16px;
+  font-weight: 300;
+  height: 26px;
+  line-height: 26px;
+  border-bottom: 2px solid transparent;
+}
+
+.site-header .menu a + a {
+  margin-left: 20px;
+}
+.site-header .menu a.active,
+.site-header .menu a:hover {
+  border-color: rgba(0, 0, 0, 0.1);
+}

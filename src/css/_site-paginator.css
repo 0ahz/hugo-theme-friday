@@ -1,0 +1,29 @@
+.site-paginator {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 20px 0 20px;
+}
+.site-paginator a {
+  display: block;
+  color: #111;
+  padding: 8px 16px;
+  margin-bottom: 5px;
+  border-radius: 6px;
+  border: 1px solid #e5e9f2;
+  text-decoration: none;
+}
+
+.site-paginator a + a{
+  margin-left: 5px;
+}
+
+.site-paginator a.active{
+  display: inline-block;
+  font-style: normal;
+  background-color: #111;
+  border: 1px solid #111;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+}

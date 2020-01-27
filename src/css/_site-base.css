@@ -1,0 +1,31 @@
+html {
+  font-size: 16px;
+}
+body {
+  color: #444443;
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
+    helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  transition: opacity 0.4s ease-in;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+a {
+  color: #434344;
+  text-decoration: none;
+  transition: all 0.25s ease-in;
+}
+
+a:hover {
+  color: #555;
+  text-decoration-color: rgba(0, 0, 0, 0.6);
+  opacity: 0.8;
+}
+
+.container {
+  max-width: 760px;
+  box-sizing: border-box;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin: 0 auto;
+  zoom: 1;
+}

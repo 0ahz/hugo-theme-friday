@@ -1,0 +1,47 @@
+.site-post .header {
+  padding-top: 32px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f2f2f2;
+}
+.site-post .header h1.title {
+  margin: 0;
+  padding: 15px 0;
+  font-size: 24px;
+  line-height: 40px;
+}
+
+.site-post .header .meta {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.site-post .header .meta .date {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 13px;
+}
+
+.site-post .header .meta .author {
+  position: relative;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 13px;
+}
+.site-post .header .meta .author::before {
+  content: '/ ';
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.2);
+  margin: 0 4px;
+}
+
+.site-post .content {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.site-post .topics,
+.site-post .tags,
+.site-post .prev-next {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-top: 1px solid #f9f9f9;
+}

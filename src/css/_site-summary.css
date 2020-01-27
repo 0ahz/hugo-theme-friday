@@ -1,0 +1,22 @@
+.site-summary .s-item{
+  margin: 25px 0 35px;
+}
+.site-summary .s-item .meta {
+  font-size: 14px;
+  color: #999;
+}
+.site-summary .s-item .meta time {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 13px;
+}
+.site-summary .s-item .title {
+  color: #222223;
+  font-size: 22px;
+  line-height: 34px;
+  margin: 10px 0 12px;
+}
+.site-summary .s-item .desc {
+  font-size: 16px;
+  line-height: 26px;
+  color: #444443;
+}

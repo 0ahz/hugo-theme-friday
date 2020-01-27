@@ -1,0 +1,14 @@
+{{ if gt .Paginator.TotalPages 1 }}
+<div class="site-paginator" role="navigation">
+  {{ $currPageNumber := .Paginator.PageNumber }}
+  {{ if .Paginator.HasPrev }}
+  <a href="{{ .Paginator.First.URL }}">First</a>
+  {{ end }}
+  {{ range .Paginator.Pagers }}
+  <a href="{{ .URL }}" class="{{ if eq $currPageNumber .PageNumber }}active{{ end }}">{{ .PageNumber }}</a>
+  {{ end }} 
+  {{ if .Paginator.HasNext }}
+  <a href="{{ .Paginator.Last.URL }}">Last</a>
+  {{ end }}
+</div>
+{{ end }}
