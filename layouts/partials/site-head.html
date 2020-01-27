@@ -6,13 +6,7 @@
       content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover"
     />
   <!--  -->
-  <title>
-    {{ block "title" . }}
-      {{ .Site.Title }} 
-        {{ with .Params.Title }} | {{ . }}
-      {{ end }}
-    {{ end }}
-  </title>
+  <title>{{ block "title" . }}{{ .Site.Title }}{{ with .Params.Title }} | {{ . }}{{ end }}{{ end }}</title>
   <!--  -->
   {{ range .Site.Params.custom_css }}
     <link rel="stylesheet" href="{{ relURL ($.Site.BaseURL) }}{{ . }}">
@@ -27,4 +21,7 @@
   <link href="{{ relURL (printf "%s%s" "dist/" .) }}" rel="stylesheet"> 
   {{ end }}
   <!--  -->
+  {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
+    {{ template "_internal/google_analytics_async.html" . }}
+  {{ end }}
 </head>
